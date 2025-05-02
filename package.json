@@ -5,15 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-  "mui-theme-manager": "./dist/commands/init.js"
-},
+    "mui-theme-manager": "./dist/commands/init.js"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "init-themes": "node -e \"require('fs').mkdirSync('./src/themes', { recursive: true })\"",
-  "test mui-theme-manager": "npm run init-themes && jest --detectOpenHandles",
- 
+    "test mui-theme-manager": "npm run init-themes && jest --detectOpenHandles",
     "build": "tsc",
     "ci": "npm run build",
     "mui-theme-manager:init": "ts-node src/commands/init.ts"
@@ -44,7 +43,7 @@
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "@mui/material": "^5.0.0",
+    "@mui/material": ">=5.0.0",
     "@mui/system": "^5.0.0"
   }
 }
