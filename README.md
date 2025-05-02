@@ -12,7 +12,7 @@ MUI Theme Manager simplifies theme management in Material-UI-based React applica
 
 ## **Version**
 
-Current Version: **1.0.1**
+Current Version: **1.0.2**
 
 ---
 
