@@ -1,0 +1,47 @@
+{
+  "name": "mui-theme-manager",
+  "version": "1.0.0",
+  "description": "Custome or Personal Material-UI theme manager",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "init-themes": "node -e \"require('fs').mkdirSync('./src/themes', { recursive: true })\"",
+  "test": "npm run init-themes && jest --detectOpenHandles",
+ 
+    "build": "tsc",
+    "ci": "npm run build",
+    "mui-theme-manager:init": "ts-node src/commands/init.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FleuryDev/mui-theme-manager.git"
+  },
+  "keywords": [
+    "MUI",
+    "Theme",
+    "Materials",
+    "React",
+    "theme",
+    "FleuryDev"
+  ],
+  "author": "FleuryDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FleuryDev/mui-theme-manager/issues"
+  },
+  "homepage": "https://github.com/FleuryDev/mui-theme-manager#readme",
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.15.3",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^5.0.0",
+    "@mui/system": "^5.0.0"
+  }
+}

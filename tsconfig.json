@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "declaration": true, // Génère les fichiers .d.ts
+    "emitDeclarationOnly": true, // Génère uniquement les fichiers .d.ts (facultatif)
+    "outDir": "dist", // Dossier de sortie pour les fichiers compilés et .d.ts
+    "module": "commonjs", // Module utilisé (par exemple, ESNext pour Vite)
+    "target": "ES6", // Version cible de JavaScript
+    "moduleDetection":"force",
+    "allowJs":true,
+     "moduleResolution": "node",
+     
+    "baseUrl": "./",
+    "rootDir":"src",
+    "lib":["ESNext","dom"],
+    "types": ["jest", "@testing-library/jest-dom","node"],
+    "noEmit":true,
+   
+    "paths": {
+      "@mui/*": ["../node_modules/@mui/*"] // Indique où trouver les modules MUI
+    },
+   // Version cible de JavaScript
+    "strict": true, // Active les vérifications strictes
+    "esModuleInterop": true, // Active l'interopérabilité avec les modules CommonJS
+    "skipLibCheck": true,
+    "jsx":"react" // Ignore la vérification des types des fichiers de bibliothèque
+  },
+  "include": ["src/**/*", "./vite-env.d.ts"], // Inclut tous les fichiers dans le dossier src
+  "exclude": ["node_modules", "test"] // Exclut les dossiers inutiles
+}
