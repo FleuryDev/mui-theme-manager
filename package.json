@@ -1,6 +1,6 @@
 {
   "name": "mui-theme-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custome or Personal Material-UI theme manager",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

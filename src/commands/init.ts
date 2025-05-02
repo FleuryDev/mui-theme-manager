@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs';
 import path from 'path';
-
+console.log('Initializing theme manager...');
 /**
  * Initializes the theme manager by creating a directory for themes and a default theme file if they do not already exist.
  *
@@ -87,3 +87,4 @@ const fileExists = async (filePath: string): Promise<boolean> => {
     return false;
   }
 };
+initializeThemeManager()
