@@ -48,13 +48,21 @@ or
 yarn add mui-theme-manager
 ```
 
-After installation, initialize the package by running the following command:
+---
+
+## **Post-Installation Script**
+
+After installing the package, you need to execute a script to generate the `themes` folder in your `src` directory. This folder will contain your custom theme files.
+
+### **Command to Run**
 
 ```bash
-npx mui-theme-manager init
+npx mui-theme-manager
 ```
 
-This will set up the necessary configuration and folder structure for your project.
+This command will:
+1. Create a `src/themes` directory if it doesn't already exist.
+2. Log a message indicating whether the directory was created or already exists.
 
 ---
 
@@ -196,7 +204,7 @@ A custom hook to access the theme context.
 
 #### Returns:
 - `themeName`: The name of the current theme.
-- `mode`: The current mode (`light` or `dark`).
+- `mode`: The current mode (`light` | `dark`).
 - `setTheme`: A function to update the theme name and mode.
 
 ---

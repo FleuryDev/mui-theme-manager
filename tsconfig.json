@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "declaration": true, // Génère les fichiers .d.ts
-    "emitDeclarationOnly": true, // Génère uniquement les fichiers .d.ts (facultatif)
-    "outDir": "dist", // Dossier de sortie pour les fichiers compilés et .d.ts
-    "module": "commonjs", // Module utilisé (par exemple, ESNext pour Vite)
+    "emitDeclarationOnly": false, // Génère uniquement les fichiers .d.ts (facultatif)
+    "outDir": "./dist", // Dossier de sortie pour les fichiers compilés et .d.ts
+    "module": "CommonJS", // Module utilisé (par exemple, ESNext pour Vite)
     "target": "ES6", // Version cible de JavaScript
     "moduleDetection":"force",
     "allowJs":true,
@@ -13,7 +13,7 @@
     "rootDir":"src",
     "lib":["ESNext","dom"],
     "types": ["jest", "@testing-library/jest-dom","node"],
-    "noEmit":true,
+    //"noEmit":true,
    
     "paths": {
       "@mui/*": ["../node_modules/@mui/*"] // Indique où trouver les modules MUI

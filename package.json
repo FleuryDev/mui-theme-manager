@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Custome or Personal Material-UI theme manager",
   "main": "dist/index.js",
-  "type": "module",
+  "types": "dist/index.d.ts",
+  "bin": {
+  "mui-theme-manager": "./dist/commands/init.js"
+},
   "files": [
     "dist"
   ],
