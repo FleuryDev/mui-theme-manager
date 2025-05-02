@@ -235,7 +235,7 @@ console.log(theme.palette.primary.main); // Output: '#1976d2'
 The package includes tests to ensure functionality. To run the tests:
 
 ```bash
-npm test
+npm test mui-theme-manager
 ```
 
 ### **Test Setup**

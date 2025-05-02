@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "init-themes": "node -e \"require('fs').mkdirSync('./src/themes', { recursive: true })\"",
-  "test": "npm run init-themes && jest --detectOpenHandles",
+  "test mui-theme-manager": "npm run init-themes && jest --detectOpenHandles",
  
     "build": "tsc",
     "ci": "npm run build",
