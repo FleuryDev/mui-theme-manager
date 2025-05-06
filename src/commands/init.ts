@@ -1,6 +1,21 @@
 #!/usr/bin/env node
-import { promises as fs } from 'fs';
-import path from 'path';
+ 
+    
+async function getFsModule(): Promise<typeof import("fs").promises> {
+   return  typeof require !== "undefined" 
+        ? Promise.resolve(require("fs").promises) 
+        : import("fs").then(mod => mod.promises);
+        }
+const isESM = typeof module === "undefined" || typeof module.exports === "undefined";
+
+ async function getPathModule(): Promise<typeof import("path")> {
+    if (isESM) {
+        const pathModule = import("path");
+        return pathModule;
+    } else {
+        return await require("path");
+    }
+}
 console.log('Initializing theme manager...');
 /**
  * Initializes the theme manager by creating a directory for themes and a default theme file if they do not already exist.
@@ -27,7 +42,9 @@ console.log('Initializing theme manager...');
  *   .catch((error) => console.error('Failed to initialize theme manager:', error));
  * ```
  */
-export const initializeThemeManager = async () => {
+const initializeThemeManager = async () => {
+const path = await getPathModule();
+const fs = await getFsModule();
   try {
     const projectSrcDir = path.join(process.cwd(), 'src');
     const themesDir = path.join(projectSrcDir, 'themes');
@@ -80,6 +97,7 @@ export const initializeThemeManager = async () => {
 
 // Fonction utilitaire pour vérifier si un fichier existe
 const fileExists = async (filePath: string): Promise<boolean> => {
+  const fs = await getFsModule();
   try {
     await fs.access(filePath);
     return true;

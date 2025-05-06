@@ -5,6 +5,7 @@ export const list: Record<string, any> = {};
 function getEnvironment(): "Node.js" | "Vite (Navigateur)" | "Webpack" | "Navigateur" {
     if (typeof process !== "undefined" && process.versions?.node) {
         return "Node.js";
+        // @ts-ignore
     } else if (typeof import.meta !== "undefined" && import.meta.env) {
         return "Vite (Navigateur)";
         // @ts-ignore
@@ -36,6 +37,7 @@ async function loadThemes(): Promise<void> {
         }
     } else if (environment === "Vite (Navigateur)") {
         // Vite utilise import.meta.glob pour charger les modules de manière dynamique
+        // @ts-ignore
         const modules = import.meta.glob("/src/themes/*.{ts,js}", { eager: true }) as Record<string, any>;
         
         Object.entries(modules).forEach(([filePath, module]) => {

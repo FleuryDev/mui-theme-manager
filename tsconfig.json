@@ -3,11 +3,11 @@
     "declaration": true, // Génère les fichiers .d.ts
     "emitDeclarationOnly": false, // Génère uniquement les fichiers .d.ts (facultatif)
     "outDir": "./dist", // Dossier de sortie pour les fichiers compilés et .d.ts
-    "module": "ESNext", // Module utilisé (par exemple, ESNext pour Vite)
-    "target": "ESNext", // Version cible de JavaScript
+   
     "moduleDetection":"force",
     "allowJs":true,
      "moduleResolution": "node",
+    "resolveJsonModule": true, // Permet l'importation de fichiers JSON
      
     "baseUrl": "./",
     "rootDir":"src",

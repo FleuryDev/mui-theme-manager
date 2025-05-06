@@ -11,11 +11,11 @@ MUI Theme Manager simplifies theme management in Material-UI-based React applica
 ---
 
 ## **Version**
-🔥 Stable Version: **2.0.3**
+🔥 Stable Version: **2.0.8**
 
 ⚠️ Previous versions are deprecated and no longer maintained.
 
-*Starting from version 2.0.2, MUI Theme Manager officially supports environments:*
+*Starting from version 2.0.4, MUI Theme Manager officially supports environments:*
 
 - ✅ Node.js
 
