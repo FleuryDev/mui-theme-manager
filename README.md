@@ -11,8 +11,17 @@ MUI Theme Manager simplifies theme management in Material-UI-based React applica
 ---
 
 ## **Version**
+🔥 Stable Version: **2.0.3**
 
-Current Version: **1.0.2**
+⚠️ Previous versions are deprecated and no longer maintained.
+
+*Starting from version 2.0.2, MUI Theme Manager officially supports environments:*
+
+- ✅ Node.js
+
+- ✅ Vite
+
+- ✅ Webpack
 
 ---
 
@@ -24,13 +33,25 @@ Current Version: **1.0.2**
 - **Contact**: groupInnov.dev@gmail.com
 
 ---
+## **Newest**
+- ✅ Supports TypeScript and JavaScript files in the src/themes/ folder.
+
+- ✅ New Components:
+
+  -  `<SwitchThemeMode/>` : A switch button component provided by MUI, allowing seamless switching between `light` and `dark` mode.
+
+  - `<ThemeList/>` : Displays available themes in the `src/themes/` folder, showing `name`, `colors`, and `fontFamily`. No configuration required.
 
 ## **Features**
-- Dynamically load and switch between multiple Material-UI themes.
-- Support for light and dark modes.
-- Theme persistence using `localStorage`.
-- Centralized theme management using React Context.
-- Easy integration with Material-UI's `ThemeProvider`.
+- 🔄 Dynamically load and switch between multiple `Material-UI` themes.
+
+- 🌗 Full support for `light` and `dark` modes.
+
+- 💾 Theme persistence using **localStorage**.
+
+- 📦 Centralized theme management via React Context.
+
+- ⚡ Easy integration with **Material-UI's** `ThemeProvider`.
 
 ---
 
@@ -52,17 +73,18 @@ yarn add mui-theme-manager
 
 ## **Post-Installation Script**
 
-After installing the package, you need to execute a script to generate the `themes` folder in your `src` directory. This folder will contain your custom theme files.
-
-### **Command to Run**
+After installation, run the following command to generate the `themes` folder in your `src` directory:
 
 ```bash
 npx mui-theme-manager
 ```
 
-This command will:
-1. Create a `src/themes` directory if it doesn't already exist.
-2. Log a message indicating whether the directory was created or already exists.
+
+This command will: 
+
+1️⃣ Create a src/themes directory if it doesn't already exist. 
+
+2️⃣ Log a message indicating whether the directory was created or already existed.
 
 ---
 
@@ -89,7 +111,7 @@ export default App;
 
 ### **2. Creating Themes**
 
-Themes are defined as individual files in the `src/themes` directory. Each theme file must export:
+Each theme file should be stored in the `src/themes` folder as `.ts` or `.js` files, with:
 - `name`: The name of the theme.
 - `data`: A function that returns a Material-UI theme object based on the mode (`light` or `dark`).
 
@@ -188,7 +210,34 @@ export default App;
 ```
 
 ---
+### **5. Changing ThemeMode via `<SwitchThemeMode/>` component**
+In the new version, you can use `<SwitchThemeMode/>` component. It's a Switcher button component used to switch the theme mode : `Light` or `Dark`. 
+Example : 
 
+```tsx
+  <div>
+    <SwitchThemeMode/>
+  </div>
+```
+---
+### **6. Accessing available themes list**
+You can use the `<ThemeList/>` component to display all available theme and select a new theme for your application.
+```tsx
+ const Dashboard = ()=>{
+    return <>
+      <h1>Dashboard</h1>
+      <div>
+        <h2>Themes</h2>
+          <ThemeList cardHeight={200} style={{ marginTop: '20px' }} />
+      </div>
+    </>
+ }
+```
+@param {Object} props - The props object for the component.
+ @param {number} [props.cardHeight] - Optional height for the theme cards.
+ @param {object} [props.props] - Additional props to be passed to the Grid container.
+ 
+---
 ## **API Reference**
 
 ### **ThemeProvider**

@@ -3,8 +3,8 @@
     "declaration": true, // Génère les fichiers .d.ts
     "emitDeclarationOnly": false, // Génère uniquement les fichiers .d.ts (facultatif)
     "outDir": "./dist", // Dossier de sortie pour les fichiers compilés et .d.ts
-    "module": "CommonJS", // Module utilisé (par exemple, ESNext pour Vite)
-    "target": "ES6", // Version cible de JavaScript
+    "module": "ESNext", // Module utilisé (par exemple, ESNext pour Vite)
+    "target": "ESNext", // Version cible de JavaScript
     "moduleDetection":"force",
     "allowJs":true,
      "moduleResolution": "node",
